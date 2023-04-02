@@ -1,29 +1,35 @@
+<!DOCTYPE html>
 <html>
+
 <head>
 
     <link rel="stylesheet" href="/stylesheets/default.css">
 
     <script>
-        var replaced = false;
+        
+        const myFirstArray = ["text0", "text1", "text2"];
 
-        function randomizerFunction() {
-            if (!replaced) {
-            document.getElementById("replaceMe").innerHTML = "not random";
-            replaced = true;
-            } else {
-            document.getElementById("replaceMe").innerHTML = "hello! please replace me."
-            replaced = false;
+        function replaceFunction() {
+            document.getElementById("replaceMe").innerHTML = getRandomItem(myFirstArray);
         }
-    }
+
+        function getRandomItem(array) {
+            var randomIndex = Math.floor(Math.random() * array.length);
+            var randomItem = array[randomIndex];
+            return randomItem;
+        }
+
     </script>
 
 </head>
 
 <body>
 
-<p id="replaceMe">hello! please replace me.</p>
-<button id="replacerButton" onclick="randomizerFunction()">click!</button>
-<button id="preReplacement" onclick="randomizerFunction()">old</button>
+    <p id="replaceMe">hello! please randomize me.</p>
+    <button id="replacerButton" onclick="replaceFunction()">replace</button>
+    <button id="preReplacement" onclick="replaceFunction()">old</button>
+    <button id="testButton" onclick="testFunction()">test</button>
 
 </body>
+
 </html>
