@@ -1,0 +1,27 @@
+<html>
+<head>
+
+    <script>
+        var replaced = false;
+
+        function randomizerFunction() {
+            if (!replaced) {
+            document.getElementById("replaceMe").innerHTML = "not random";
+            replaced = true;
+            } else {
+            document.getElementById("replaceMe").innerHTML = "hello! please replace me."
+            replaced = false;
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+<p id="replaceMe">hello! please replace me.</p>
+<button id="replacerButton" onclick="randomizerFunction()">click!</button>
+<button id="preReplacement" onclick="randomizerFunction()">old</button>
+
+</body>
+</html>
