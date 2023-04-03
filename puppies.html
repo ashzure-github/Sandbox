@@ -15,10 +15,12 @@
     </center>   
 
     <script>
+        
         var imageAdded = 0;
 
         function addImage() {
-            if (imageAdded < 2) {
+            switch (imageAdded) {
+            case 0:
                 var img = document.createElement("img");
                 img.setAttribute("src", "/images/puppy.jpg");
                 img.setAttribute("width", "100");
@@ -27,17 +29,29 @@
                 document.body.appendChild(img);
                 document.getElementById("puppyButton").innerHTML= "Add a friend!";
                 imageAdded++;
-            } else {
+            break;
+            case 1:              
+                var img = document.createElement("img");
+                img.setAttribute("src", "/images/puppy.jpg");
+                img.setAttribute("width", "100");
+                img.style.height = "100px";
+                img.style.borderRadius = "50%";
+                document.body.appendChild(img);
+                document.getElementById("puppyButton").innerText = "stop here.";
+                imageAdded++;
+            break;
+            case 2:
                 var imgs = Array.from(document.getElementsByTagName("img"))
                 imgs.forEach(img => {
                     img.style.animationDuration = "500ms";
                     img.style.animationName = "spin";
                     img.style.animationIterationCount = "infinite";
                     img.style.animationTimingFunction = "linear"
-                })
-                document.getElementById("puppyButton").innerText = "hubris.";
+                });
+                document.getElementById("puppyButton").innerText= "hubris.";
             }
         }
+
     </script>
 
 </body>
