@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <link rel="stylesheet" href="/stylesheets/default.css">
@@ -9,61 +10,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body > img {
-            margin-top: 10px;
-        }
-
         #puppyButton {
-            margin-bottom: 100px;
+            margin-bottom: 10px;
+            color: hotpink;
+            border-style: solid;
+            border-color: hotpink;
+            border-width: 2px;
         }
     </style>
 
 </head>
+
 <body>
 
     <center>
-    <button id="puppyButton" onclick="addImage()">summon puppy</button>
-    </center>   
+        <button id="puppyButton" onclick="addImage()">summon puppy</button>
+    </center>
 
     <script>
-        
-        var imageAdded = 0;
+
+        let imageAdded = 0;
+        let stopButtonPresent = false;
 
         function addImage() {
             switch (imageAdded) {
-            case 0:
-                var img = document.createElement("img");
-                img.setAttribute("src", "/images/puppy.jpg");
-                img.setAttribute("width", "100");
-                img.style.height = "100px";
-                img.style.borderRadius = "50%";
-                document.body.appendChild(img);
-                document.getElementById("puppyButton").innerHTML= "Add a friend!";
-                imageAdded++;
-            break;
-            case 1:              
-                var img = document.createElement("img");
-                img.setAttribute("src", "/images/puppy.jpg");
-                img.setAttribute("width", "100");
-                img.style.height = "100px";
-                img.style.borderRadius = "50%";
-                document.body.appendChild(img);
-                document.getElementById("puppyButton").innerText = "stop here.";
-                imageAdded++;
-            break;
-            case 2:
-                var imgs = Array.from(document.getElementsByTagName("img"))
-                imgs.forEach(img => {
-                    img.style.animationDuration = "500ms";
-                    img.style.animationName = "spin";
-                    img.style.animationIterationCount = "infinite";
-                    img.style.animationTimingFunction = "linear"
-                });
-                document.getElementById("puppyButton").innerText= "hubris.";
+                case 0:
+                    var img = document.createElement("img");
+                    img.setAttribute("src", "/images/puppy.jpg");
+                    img.setAttribute("width", "100");
+                    img.style.height = "100px";
+                    img.style.borderRadius = "50%";
+                    document.body.appendChild(img);
+                    document.getElementById("puppyButton").innerHTML = "Add a friend!";
+                    imageAdded++;
+                    break;
+                case 1:
+                    var img = document.createElement("img");
+                    img.setAttribute("src", "/images/puppy.jpg");
+                    img.setAttribute("width", "100");
+                    img.style.height = "100px";
+                    img.style.borderRadius = "50%";
+                    document.body.appendChild(img);
+                    document.getElementById("puppyButton").innerText = "Stop here.";
+                    imageAdded++;
+                    break;
+                case 2:
+                    var imgs = Array.from(document.getElementsByTagName("img"))
+                    imgs.forEach(img => {
+                        img.style.animationDuration = "500ms";
+                        img.style.animationName = "spin";
+                        img.style.animationIterationCount = "infinite";
+                        img.style.animationTimingFunction = "linear";
+                    });
+                    document.getElementById("puppyButton").innerText = "Hubris.";
+                    if (stopButtonPresent === false) {
+                        var stopButton = document.createElement("button");
+                        stopButton.style.display = "block";
+                        stopButton.style.margin = "auto";
+                        stopButton.style.borderColor = "gray";
+                        stopButton.style.borderWidth = "2";
+                        stopButton.style.borderStyle = "solid";
+                        stopButton.style.marginTop = "20px";
+                        stopButton.textContent = "I'm sorry!";
+                        document.body.appendChild(stopButton)
+                        stopButtonPresent = true;
+                    } else {}
             }
+
         }
 
     </script>
 
 </body>
+
 </html>
