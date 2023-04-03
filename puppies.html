@@ -31,26 +31,31 @@
 
         let imageAdded = 0;
         let stopButtonPresent = false;
+        var imgContainer = document.createElement("div");
+
+        imgContainer.style.textAlign = "center";
+        document.body.appendChild(imgContainer);
 
         function addImage() {
             switch (imageAdded) {
                 case 0:
                     var img = document.createElement("img");
-                    img.setAttribute("src", "/images/puppy.jpg");
-                    img.setAttribute("width", "100");
+                    img.src = "/images/puppy.jpg";
+                    img.style.width = "100px";
+                    img.style.display = "inline-block";
                     img.style.height = "100px";
                     img.style.borderRadius = "50%";
-                    document.body.appendChild(img);
-                    document.getElementById("puppyButton").innerHTML = "Add a friend!";
+                    imgContainer.appendChild(img);
+                    document.getElementById("puppyButton").innerText = "Add a friend!";
                     imageAdded++;
                     break;
                 case 1:
                     var img = document.createElement("img");
-                    img.setAttribute("src", "/images/puppy.jpg");
-                    img.setAttribute("width", "100");
+                    img.src = "/images/puppy.jpg";
+                    img.style.width = "100px";
                     img.style.height = "100px";
                     img.style.borderRadius = "50%";
-                    document.body.appendChild(img);
+                    imgContainer.appendChild(img);
                     document.getElementById("puppyButton").innerText = "Stop here.";
                     imageAdded++;
                     break;
