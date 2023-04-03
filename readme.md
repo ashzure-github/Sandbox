@@ -8,5 +8,8 @@
 
 # issues
 
+# questions
+
 ## puppies.html
-- trying to make stopButton appear only once by nesting an if-else statement inside of my switch statement's case 2. seems to not make the stopButton appear at all.
+- why does my if-else statement that checks for the presence of stopButton need to use === rather than just = being sufficient
+- are event listeners inefficient? is there any other way to make the hover color change work that doesn't use them?

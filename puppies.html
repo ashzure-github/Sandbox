@@ -63,17 +63,27 @@
                         img.style.animationTimingFunction = "linear";
                     });
                     document.getElementById("puppyButton").innerText = "Hubris.";
+
                     if (stopButtonPresent === false) {
                         var stopButton = document.createElement("button");
                         stopButton.style.display = "block";
+                        stopButton.style.backgroundColor = "white";
                         stopButton.style.margin = "auto";
                         stopButton.style.borderColor = "gray";
                         stopButton.style.borderWidth = "2";
                         stopButton.style.borderStyle = "solid";
                         stopButton.style.marginTop = "20px";
                         stopButton.textContent = "I'm sorry!";
-                        document.body.appendChild(stopButton)
+
+                        stopButton.addEventListener("mouseover", function() {
+                            stopButton.style.backgroundColor = "blue";
+                        });
+                        stopButton.addEventListener("mouseout", function() {
+                            stopButton.style.backgroundColor = "white";
+                        });
+                        document.body.appendChild(stopButton);
                         stopButtonPresent = true;
+
                     } else {}
             }
 
