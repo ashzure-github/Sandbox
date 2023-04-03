@@ -6,26 +6,16 @@
     <meta charset="UTF-8">
     <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @keyframes spin {
-            from {
-                transform:rotate(0deg);
-            }
-            to {
-                transform:rotate(360deg);
-            }
-        }
-    </style>
+
+</head>
+<body>
+
+    <center>
+    <button id="puppyButton" onclick="addImage()">summon puppy</button>
+    </center>   
+
     <script>
         var imageAdded = 0;
-    
-        function replaceText() {
-            document.getElementById("test").innerText = "new text";
-        }
-
-        function replaceTextOriginal() {
-            document.getElementById("test").innerText = "default text";
-        }
 
         function addImage() {
             if (imageAdded < 2) {
@@ -45,16 +35,10 @@
                     img.style.animationIterationCount = "infinite";
                     img.style.animationTimingFunction = "linear"
                 })
-                document.getElementById("test").innerText = "hubris.";
+                document.getElementById("puppyButton").innerText = "hubris.";
             }
         }
     </script>
-</head>
 
-<body>
-    <p id="test">default text</p>
-    <button type="button" onclick="replaceText()">new text</button>
-    <button type="button" onclick="replaceTextOriginal()">old text</button>
-    <button id="puppyButton" onclick="addImage()">summon puppy</button>
 </body>
 </html>
