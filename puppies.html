@@ -100,13 +100,6 @@
                         });
                         document.body.appendChild(stopButton);
                         stopButtonPresent = true;
-                        var imgs = Array.from(document.getElementsByTagName("img"))
-                        const noSpin = img => {
-                            img.style.animationPlayState = "pause";
-                        }
-                        stopButton.onclick = function(img) {
-                            imgs.forEach(noSpin);
-                        };
                     } else {};
             }
 
