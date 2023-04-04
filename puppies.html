@@ -104,7 +104,7 @@
                         const noSpin = img => {
                             img.style.animationPlayState = "pause";
                         }
-                        stopButton.onclick = function() {
+                        stopButton.onclick = function(img) {
                             imgs.forEach(noSpin);
                         };
                     } else {};

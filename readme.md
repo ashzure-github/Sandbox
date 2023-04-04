@@ -11,7 +11,8 @@
 
 ## puppies.html
 - why does my if-else statement that checks for the presence of stopButton need to use === rather than just = being sufficient
-- are event listeners inefficient? is there any other way to make the hover color change work that doesn't use them?
+- are event listeners inefficient? is there any other way to make the hover color change work that doesn't use them? maybe use 
+  css to do it after the element is created?
 
 ## misc
 - What is closure? example? excercise? why/when use it?
