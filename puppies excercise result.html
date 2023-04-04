@@ -72,12 +72,14 @@
                     break;
                 case 2:
                     var imgs = Array.from(document.getElementsByTagName("img"))
-                    const spin = img => {
-                        img.style.animationDuration = "500ms";
-                        img.style.animationName = "spin";
-                        img.style.animationIterationCount = "infinite";
-                        img.style.animationTimingFunction = "linear";
+                    function spin(img) {
+                        return img.style.animationDuration = "500ms";
+                        return img.style.animationName = "spin";
+                        return img.style.animationIterationCount = "infinite";
+                        return img.style.animationTimingFunction = "linear"; 
+                        } 
                     }
+
                     imgs.forEach(spin);
                     document.getElementById("puppyButton").innerText = "Hubris.";
 
@@ -100,17 +102,12 @@
                         });
                         document.body.appendChild(stopButton);
                         stopButtonPresent = true;
-                        var imgs = Array.from(document.getElementsByTagName("img"))
-                        const noSpin = img => {
+                        stopButton.onclick= function() {
                             img.style.animationPlayState = "pause";
-                        }
-                        stopButton.onclick = function() {
-                            imgs.forEach(noSpin);
                         };
                     } else {};
             }
 
-    }
 
     </script>
 
