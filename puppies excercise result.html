@@ -73,13 +73,11 @@
                 case 2:
                     var imgs = Array.from(document.getElementsByTagName("img"))
                     function spin(img) {
-                        return img.style.animationDuration = "500ms";
-                        return img.style.animationName = "spin";
-                        return img.style.animationIterationCount = "infinite";
-                        return img.style.animationTimingFunction = "linear"; 
-                        } 
+                        img.style.animationDuration = "500ms";
+                        img.style.animationName = "spin";
+                        img.style.animationIterationCount = "infinite";
+                        img.style.animationTimingFunction = "linear";
                     }
-
                     imgs.forEach(spin);
                     document.getElementById("puppyButton").innerText = "Hubris.";
 
@@ -102,12 +100,11 @@
                         });
                         document.body.appendChild(stopButton);
                         stopButtonPresent = true;
-                        stopButton.onclick= function() {
-                            img.style.animationPlayState = "pause";
-                        };
+                        
                     } else {};
             }
 
+    }
 
     </script>
 
