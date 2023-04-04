@@ -16,3 +16,4 @@
 
 ## misc
 - What is closure? example? excercise? why/when use it?
+- how do symbols work and when to use them?
