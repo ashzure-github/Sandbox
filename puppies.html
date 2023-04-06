@@ -91,12 +91,16 @@
                         stopButton.style.borderStyle = "solid";
                         stopButton.style.marginTop = "20px";
                         stopButton.textContent = ">I'm sorry!";
-                        stopButton.onmouseover.style.backgroundColor = "lightGray";
-                        stopButton.onmouseleave.style.backgroundColor = "white";
+                        stopButton.addEventListener("mouseover", function() {
+                            stopButton.style.backgroundColor = "lightGray";
+                        });
+                        stopButton.addEventListener("mouseout", function() {
+                            stopButton.style.backgroundColor = "white";
+                        });  
                         document.body.appendChild(stopButton);
                         stopButtonPresent = true;
                         
-                    } else {};
+                    } else {}
             }
 
     }

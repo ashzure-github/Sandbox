@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="/stylesheets/default.css">
+
+    <meta charset="UTF-8">
+    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <button id="stringReverseButton" onclick="reverseString()">reverse of stringTest</button>
+<script>
+
+    let stringTest = "This is a string";
+
+    function reverseString() {
+        var stringTestArray = stringTest.split("");
+        var stringTestArrayReverse = stringTestArray.reverse();
+        var textNodeReverse = document.createTextNode(stringTestArrayReverse);
+        document.body.appendChild(textNodeReverse);
+       
+    };
+
+
+</script>
+
+</body>
+</html>
