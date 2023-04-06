@@ -17,10 +17,11 @@
     let stringTest = "This is a string";
 
     function reverseString() {
-        var stringTestArray = stringTest.split("");
-        var stringTestArrayReverse = stringTestArray.reverse();
-        var textNodeReverse = document.createTextNode(stringTestArrayReverse);
-        document.body.appendChild(textNodeReverse);
+    var stringTestToArray = stringTest.split("");
+    var stringTestToArrayReverse = stringTestToArray.reverse();
+    var finalReversedString = stringTestToArrayReverse.join(" ");
+    var forPrintReversedString = document.createTextNode(finalReversedString);
+    document.body.appendChild(forPrintReversedString);
        
     };
 
