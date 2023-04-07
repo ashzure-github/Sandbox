@@ -11,17 +11,23 @@
 </head>
 
 <body>
-    <button id="stringReverseButton" onclick="reverseString()">reverse of stringTest</button>
+
+    <input type="text" id="inputField">
+    <button id="stringReverseButton" onclick="reverseString()">reverse input</button>
+
 <script>
 
     let stringTest = "This is a string";
+    var userInput = document.getElementById("inputField").value;
 
     function reverseString() {
-    var stringTestToArray = stringTest.split("");
+    var userInput = document.getElementById("inputField").value;
+    var stringTestToArray = userInput.split("");
     var stringTestToArrayReverse = stringTestToArray.reverse();
-    var finalReversedString = stringTestToArrayReverse.join(" ");
-    var forPrintReversedString = document.createTextNode(finalReversedString);
+    var finalReversedString = stringTestToArrayReverse.join("");
+    var forPrintReversedString = document.createTextNode(" " + finalReversedString);
     document.body.appendChild(forPrintReversedString);
+  
        
     };
 
