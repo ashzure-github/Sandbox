@@ -12,37 +12,38 @@
 </head>
 <body>
 
-<p>input range</p>
-<input id = "userRange">
-<button id = "fizzBuzzButton" onclick = "fizzBuzz()">execute</button>
+<p>input range</p> <input id = "userRange"> <br>
+<p>input first divider</p> <input id="userFirstDivider"> <br>
+<p>input second divider</p> <input id="userSecondDivider"> <br>
+
+<button id="fizzBuzzButton" onclick="fizzBuzz()">execute</button>
 <div id="fizzBuzzDiv"></div>
 
 
 <script>
 
 let text = ""; //initialize text variable
-let num = document.getElementById("userRange").value; //assign the value of userRange to the num variable
 
-function fizzBuzz(num) {
+function fizzBuzz() {
+    let num = document.getElementById("userRange").value;
+    let firstDivider = document.getElementById("userFirstDivider").value;
+    let secondDivider = document.getElementById("userSecondDivider").value;
 for (let i = 1; i <= num; i++) { //define let i as being 1 at the start. declares that the loop will run until i is no longer <= num. adds 1 to i at end of loop
-
-    if (i % 3 === 0 && i % 5 === 0) {
+    if (i % firstDivider === 0 && i % secondDivider === 0) {
         text += "FizzBuzz" + "<br>";
     }
-    else if (i % 3 === 0) {
+    else if (i % firstDivider === 0) {
         text += "Fizz" + "<br>";
     }
-    else if (i % 5 === 0) {
+    else if (i % secondDivider === 0) {
         text += "Buzz" + "<br>";
     }
     else {
         text += i + "<br>";
     }
 };
-}
-
 document.getElementById("fizzBuzzDiv").innerHTML = text; //prints the value of text into fizzBuzzDiv
-
+};
 
 </script>
 
