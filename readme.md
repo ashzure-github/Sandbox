@@ -17,5 +17,4 @@
   css to do it after the element is created?
 
 ## misc
-- What is closure? example? excercise? why/when use it?
-- how do symbols work and when to use them?
+- what is flattening an array? dimensionality?
