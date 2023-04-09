@@ -17,4 +17,3 @@
   css to do it after the element is created?
 
 ## misc
-- what is flattening an array? dimensionality?
