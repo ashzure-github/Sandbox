@@ -1,5 +1,6 @@
 body {
     background-color:pink;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 button {
@@ -9,4 +10,3 @@ button {
     border-radius:8px;
     font-size: 200%;
 }
-

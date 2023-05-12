@@ -1,3 +1,4 @@
+// I did not write this, we have ghosts
 // Define a data structure for the nodes in the net
 class Node {
     constructor(type, data = {}) {
