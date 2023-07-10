@@ -25,6 +25,12 @@ function fib(number) {
         return fib(number - 2) + fib(number - 1);
 }
 
+let x;
+while (x = 0, x < 10, x++) {
+    x = 10
+    
+}
+
 console.log(fib(-2) === -1)
 console.log(fib(-1) === 1)
 console.log(fib(0) === 0)

@@ -3,14 +3,19 @@
 
 <head>
 
-    <link rel="stylesheet" href="/stylesheets/default.css">
+    <link rel="stylesheet" href="/stylesheets/default.css"> 
+    <script src="/scripts/getRandomItem.js"></script>
 
     <script>
         
-        const myFirstArray = ["text0", "text1", "text2"];
+        const myFirstArray = ["text0", "text1", "text2", "text3", "text4"];
 
         function replaceFunction() {
             document.getElementById("replaceMe").innerHTML = getRandomItem(myFirstArray);
+        }
+
+        function oldText() {
+            document.getElementById("replaceMe").innerHTML = "hello! please randomize me.";
         }
 
     </script>
@@ -21,8 +26,7 @@
 
     <p id="replaceMe">hello! please randomize me.</p>
     <button id="replacerButton" onclick="replaceFunction()">replace</button>
-    <button id="preReplacement" onclick="replaceFunction()">old</button>
-    <button id="testButton" onclick="testFunction()">test</button>
+    <button id="preReplacement" onclick="oldText()">old</button>
 
 </body>
 

@@ -50,7 +50,19 @@
         function addImage() {
             switch (imageAdded) {
                 case 0:
-                    var img = document.createElement("img");
+                    getPuppy0();
+                    break;
+                case 1:
+                    getPuppy1();
+                    break;
+                case 2:
+                    spinPuppy();
+            }
+
+        }
+
+        function getPuppy0() {
+            var img = document.createElement("img");
                     img.src = "/images/puppy.jpg";
                     img.style.width = "100px";
                     img.style.display = "inline-block";
@@ -59,9 +71,10 @@
                     imgContainer.appendChild(img);
                     document.getElementById("puppyButton").innerText = "Add a friend!";
                     imageAdded++;
-                    break;
-                case 1:
-                    var img = document.createElement("img");
+        };
+
+        function getPuppy1() {
+            var img = document.createElement("img");
                     img.src = "/images/puppy.jpg";
                     img.style.width = "100px";
                     img.style.height = "100px";
@@ -70,9 +83,11 @@
                     imgContainer.appendChild(img);
                     document.getElementById("puppyButton").innerText = "Stop here.";
                     imageAdded++;
-                    break;
-                case 2:
-                    var imgs = Array.from(document.getElementsByTagName("img"))
+        }
+        
+        function spinPuppy() {
+            
+            var imgs = Array.from(document.getElementsByTagName("img"))
                     const spin = img => {
                         img.style.animationDuration = "500ms";
                         img.style.animationName = "spin";
@@ -84,7 +99,13 @@
                     document.getElementById("puppyButton").innerText = "Hubris.";
 
                     if (stopButtonPresent === false) {
-                        var stopButton = document.createElement("button");
+                        getStopButton();
+
+                    } else { }
+        }
+
+        function getStopButton() {
+            var stopButton = document.createElement("button");
                         stopButton.style.display = "block";
                         stopButton.style.backgroundColor = "white";
                         stopButton.style.margin = "auto";
@@ -106,12 +127,8 @@
                         });
                         document.body.appendChild(stopButton);
                         stopButtonPresent = true;
-
-                    } else { }
-            }
-
         }
-
+    
     </script>
 
 </body>

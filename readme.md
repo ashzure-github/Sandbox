@@ -1,6 +1,5 @@
 # wants
 ## puppies.html
-- on fourth click (so after puppies start spinning) create a button to make them stop spinning. (not repeatable)
 - make the images be a random puppy 
     - make it so that only one puppy of each type can be present (maybe up the maximum amount of puppies allowed before hubris for this)  
 <br>
