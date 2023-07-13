@@ -4,7 +4,6 @@
 <head>
 
     <link rel="stylesheet" href="/stylesheets/default.css">
-
     <meta charset="UTF-8">
     <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,22 +27,28 @@
             }
 
         }
+
+        #puppyDiv {
+            text-align: center;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <center>
-        <button id="puppyButton" onclick="addImage()">summon puppy</button>
-    </center>
+    <div id="puppyDiv">
+        <button id="puppyButton">summon puppy</button>
+    </div>
 
     <script>
 
+        const puppyButton = document.getElementById("puppyButton");
         let imageAdded = 0;
         let stopButtonPresent = false;
         var imgContainer = document.createElement("div");
 
+        puppyButton.addEventListener("click", addImage);
         imgContainer.style.textAlign = "center";
         document.body.appendChild(imgContainer);
 

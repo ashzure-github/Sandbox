@@ -16,7 +16,9 @@
             box-sizing: border-box;
             }
 
-
+            #taskList {
+                list-style-type: none;
+            }
     </style>
 
 
@@ -25,7 +27,7 @@
 
 <input id="enterTask" class="preview-input" required="true" type="text" placeholder="add your task and press enter">
 <div id="inputContainer">
-    <ul id="taskList" style="list-style-type: none;">
+    <ul id="taskList">
 
     </ul>
 </div>
@@ -43,7 +45,11 @@ inputField.addEventListener("keydown", function(event) {
         newTask.appendChild(checkbox); //appends a checkbx to the new empty list item
         newTask.appendChild(taskText); //appends the user's input to the new empty list item
         taskList.appendChild(newTask); //appends a new task with a checkbox and user input into the unordered list
-        inputField.value = "";
+        inputField.value = ""; //resets the value of the input field
+    }
+
+    else {
+        alert("Not a valid string");
     }
 
  });
