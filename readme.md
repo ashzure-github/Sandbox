@@ -19,13 +19,3 @@
 <br>
 
 # questions
-
-<br>
-
-## puppies.html
-- why does my if-else statement that checks for the presence of stopButton need to use === rather than just = or == being sufficient
-- are event listeners inefficient? is there any other way to make the hover color change work that doesn't use them? maybe use 
-  css to do it after the element is created?
-<br>
-
-## misc
