@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="/stylesheets/default.css">
+    <style>
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <input type="text" id="inputField" placeholder="press enter">
+    <ul id="taskList">
+        <li id="hardTask">hi there</li>
+    </ul>
+
+    <script>
+
+        const inputField = document.getElementById("inputField");
+        const inputContent = inputField.value;
+
+        class Task {
+
+            constructor(id, description, completed = false) {        
+                this.id = id
+                this.description = description;
+                this.completed = completed;
+            };
+
+            toggleCompleted() {
+                this.completed = !this.completed
+            };
+
+            generateHtml() {
+
+            };
+
+        };
+
+        class TaskList {
+
+            taskArray = [];  
+
+            addTask(description) {
+                taskArray.push(new Task);
+            };
+
+            removeTask(taskID) {
+                taskArray.filter(taskID);
+            };
+
+        };
+
+
+        const testTask = new Task("testTask","this is a task")
+        const hardTask = document.getElementById("hardTask");
+    </script>
+
+</body>
+</html>
