@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="/stylesheets/default.css">
     <style>
 
-
+    #addTaskButton {
+        font-size: 20px;
+    }
 
     </style>
 
@@ -13,9 +15,10 @@
 
 <body>
 
-    <input type="text" id="inputField" placeholder="press enter">
+    <input type="text" id="inputField" placeholder="task">
+    <button id="addTaskButton">Add Task</button>
     <ul id="taskList">
-        <li id="hardTask">hi there</li>
+        <li id="hardTask">i'm hardcoded!</li>
     </ul>
 
     <script>
@@ -28,7 +31,7 @@
             constructor(id, description, completed = false) {        
                 this.id = id
                 this.description = description;
-                this.completed = completed;
+                this.completed = completed || false;
             };
 
             toggleCompleted() {
