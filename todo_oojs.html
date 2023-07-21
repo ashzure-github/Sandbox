@@ -15,52 +15,51 @@
 
 <body>
 
-    <input type="text" id="inputField" placeholder="task">
+    <input type="text" id="inputField" placeholder="task description">
     <button id="addTaskButton">Add Task</button>
-    <ul id="taskList">
-        <li id="hardTask">i'm hardcoded!</li>
-    </ul>
+    <ul id="taskList"></ul>
 
     <script>
+
+        class Task {
+
+            constructor(id, description, completed = false) {
+                this.id = id;
+                this.description = description;
+                this.completed = completed;
+            }
+
+            toggleCompleted() {
+                this.completed = !this.completed;
+            }
+
+        }
+
+        class TaskList {
+
+            constructor () {
+                this.tasks = {};
+                this.taskArray = [];
+            }
+
+            addTask(task) {
+                {}["key"] = "value";
+                this.tasks[task.id] = task;
+                this.taskArray.push(task);
+            }
+
+            removeTask(id) {
+                delete tasks[task.id];
+                this.taskArray = this.taskArray.filter(task => task.id !== id);
+            }
+
+        }
+
 
         const inputField = document.getElementById("inputField");
         const inputContent = inputField.value;
 
-        class Task {
-
-            constructor(id, description, completed = false) {        
-                this.id = id
-                this.description = description;
-                this.completed = completed || false;
-            };
-
-            toggleCompleted() {
-                this.completed = !this.completed
-            };
-
-            generateHtml() {
-
-            };
-
-        };
-
-        class TaskList {
-
-            taskArray = [];  
-
-            addTask(description) {
-                taskArray.push(new Task);
-            };
-
-            removeTask(taskID) {
-                taskArray.filter(taskID);
-            };
-
-        };
-
-
-        const testTask = new Task("testTask","this is a task")
-        const hardTask = document.getElementById("hardTask");
+        const hardcodedTask = new Task("testTask","this is a task")
     </script>
 
 </body>
