@@ -1,66 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-    <link rel="stylesheet" href="/stylesheets/default.css">
-    <style>
-
-    #addTaskButton {
-        font-size: 20px;
-    }
-
-    </style>
-
-</head>
-
-<body>
-
-    <input type="text" id="inputField" placeholder="task description">
-    <button id="addTaskButton">Add Task</button>
-    <ul id="taskList"></ul>
-
-    <script>
-
-        class Task {
-
-            constructor(id, description, completed = false) {
-                this.id = id;
-                this.description = description;
-                this.completed = completed;
+    <head></head>
+    <body>
+        <script>
+            class Task {
+                constructor (sentence) {
+                    this.sentence = sentence;
+                }
             }
 
-            toggleCompleted() {
-                this.completed = !this.completed;
+            class TaskList {
+                #tasks;
+
+                constructor () {
+                    this.#tasks = [];
+                }
+
+                addTask(task) {
+
+                }
             }
 
-        }
+            const taskList = new TaskList();
+            console.log(taskList);
 
-        class TaskList {
-
-            constructor () {
-                this.tasks = {};
-                this.taskArray = [];
-            }
-
-            addTask(task) {
-                {}["key"] = "value";
-                this.tasks[task.id] = task;
-                this.taskArray.push(task);
-            }
-
-            removeTask(id) {
-                delete tasks[task.id];
-                this.taskArray = this.taskArray.filter(task => task.id !== id);
-            }
-
-        }
-
-
-        const inputField = document.getElementById("inputField");
-        const inputContent = inputField.value;
-
-        const hardcodedTask = new Task("testTask","this is a task")
-    </script>
-
-</body>
+            taskList.addTask(new Task());
+            console.log(taskList);
+        </script>
+    </body>
 </html>
