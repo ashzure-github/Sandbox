@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,27 +9,48 @@
     </head>
     <body>
 
+        <ul id="itemList"></ul>
+
         <script>
 
            class shoppingItem {
 
-            constructor(key,name,price) {
-                this.key = key;
+            constructor(name,price) {
                 this.name = name;
-                this.price = price;
-            }
+                this.price = "$"+price;
+             };
 
-           } 
+           };
 
-           class shoppingCart {
+           class shoppingList {
 
-            constructor(id) {
-                this.id = id;
-            }
+            Items = {
+            milk:new shoppingItem("milk",1),
+            eggs:new shoppingItem("eggs",0.50),
+            cheese:new shoppingItem("cheese",0.50),
+            apples:new shoppingItem("apples",0.50),
+            carrot:new shoppingItem("carrot",1)
+           };
+
+            listItems() {
+                const itemListElement = document.getElementById("itemList");
+
+                for (const itemName in this.Items) {
+                    const item = this.Items[itemName];
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${item.name} for ${item.price}`;
+                    itemListElement.appendChild(listItem);
+                };
             
-           }
-     
-           var Items = {};     
+            };                                                                                            
+
+           };
+
+
+
+           const myList = new shoppingList();
+           myList.listItems();
+
 
         </script>
 
