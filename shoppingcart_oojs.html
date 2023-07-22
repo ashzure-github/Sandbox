@@ -14,14 +14,23 @@
 
            class shoppingItem {
 
-                constructor() {
-                    
-                }
+            constructor(key,name,price) {
+                this.key = key;
+                this.name = name;
+                this.price = price;
+            }
 
            } 
 
-           var shoppingItems = {item1:"itemone",item2:"item2",item3:"item3"};
-           console.log(shoppingItems.item1);
+           class shoppingCart {
+
+            constructor(id) {
+                this.id = id;
+            }
+            
+           }
+     
+           var Items = {};     
 
         </script>
 
