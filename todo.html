@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        
+
         .preview-input {
             width: 100%;
             box-sizing: border-box;
@@ -41,7 +41,7 @@ inputField.addEventListener("keydown", function(event) {
         const newTask = document.createElement("li");               //creates a new empty list item whenever newTask is called
         const checkbox = document.createElement("input")            //creates a new checkbox whenever checkbox is called
         const taskText = document.createTextNode(inputField.value); //creates a list item with the value of the user's input
-        checkbox.type = "checkbox";  
+        checkbox.type = "checkbox";
         newTask.appendChild(checkbox); //appends a checkbx to the new empty list item
         newTask.appendChild(taskText); //appends the user's input to the new empty list item
         taskList.appendChild(newTask); //appends a new task with a checkbox and user input into the unordered list
