@@ -2,57 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>shopping cart</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/stylesheets/default.css">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' fonts.gstatic.com; script-src 'self' /scripts/shopping.js; style-src 'self' /stylesheets/shopping.css;connect-src 'self' ws:;">
+        
+        <link rel="stylesheet" href="/stylesheets/shopping.css">
     </head>
     <body>
 
         <ul id="itemList"></ul>
-
-        <script>
-
-           class shoppingItem {
-
-            constructor(name,price) {
-                this.name = name;
-                this.price = "$"+price;
-             };
-
-           };
-
-           class shoppingList {
-
-            Items = {
-            milk:new shoppingItem("milk",1),
-            eggs:new shoppingItem("eggs",0.50),
-            cheese:new shoppingItem("cheese",0.50),
-            apples:new shoppingItem("apples",0.50),
-            carrot:new shoppingItem("carrot",1)
-           };
-
-            listItems() {
-                const itemListElement = document.getElementById("itemList");
-
-                for (const itemName in this.Items) {
-                    const item = this.Items[itemName];
-                    const listItem = document.createElement("li");
-                    listItem.textContent = `${item.name} for ${item.price}`;
-                    itemListElement.appendChild(listItem);
-                };
-            
-            };                                                                                            
-
-           };
-
-
-
-           const myList = new shoppingList();
-           myList.listItems();
-
-
-        </script>
+        <script src="/scripts/shopping.js"></script>
 
     </body>
 </html>
