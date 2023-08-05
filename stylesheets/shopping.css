@@ -3,14 +3,14 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#itemList {
+ul {
     background-color: lightblue;
     display: inline-block;
     padding: 5px;
     list-style-type: none;
 }
 
-#itemList li {
+ul li {
     background-color: lightskyblue;
     
 }
